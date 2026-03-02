@@ -147,6 +147,30 @@
       transform: translateY(-2px);
     }
     
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255,255,255,0.5);
+      margin-left: 15px;
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.1);
+    }
+    
+    .hero-cta-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 20px;
+    }
+    
     /* ==================== SECTIONS ==================== */
     section {
       padding: 70px 0;
@@ -313,6 +337,22 @@
       font-size: 15px;
       color: #666;
       line-height: 1.6;
+    }
+    
+    .service-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 25px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .service-btn:hover {
+      background: var(--magenta);
     }
     
     .services-tagline {
@@ -564,6 +604,16 @@
         font-size: 16px;
       }
       
+      .btn-primary, .btn-secondary {
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
+      }
+      
+      .btn-secondary {
+        margin-left: auto;
+      }
+      
       .about-content,
       .contact-grid {
         grid-template-columns: 1fr;
@@ -592,9 +642,15 @@
       <p class="hero-subtitle">
 Evaluación y orientación en neuropsicología infantil para familias que buscan claridad, estructura y acompañamiento profesional en el desarrollo de sus hijos.
       </p>
-      <a class="btn-primary" href="https://wa.me/526699296675?text=Hola,%20vi%20la%20pagina%20de%20CRESER%20y%20me%20gustaria%20recibir%20informacion%20sobre%20una%20evaluacion%20neuropsicologica%20para%20mi%20hijo(a).%20Tiene%20___%20anos." target="_blank">
-        Agendar orientación
+      
+      <a class="btn-primary" href="https://wa.me/526699296675?text=Hola,%20me%20interesa%20agendar%20una%20Entrevista%20Clinica%20Inicial%20para%20mi%20hijo(a)." target="_blank">
+        Agendar Entrevista Inicial
       </a>
+      <a class="btn-secondary" href="https://wa.me/526699296675?text=Hola,%20tengo%20dudas%20sobre%20los%20servicios%20de%20CRESER." target="_blank">
+        Resolver dudas por WhatsApp
+      </a>
+      
+      <p class="hero-cta-text">No necesitas diagnóstico previo para iniciar el proceso.</p>
     </div>
   </header>
 
@@ -661,6 +717,7 @@ Especialista en evaluación y acompañamiento en neurodesarrollo infantil.
           <div class="service-icon">🧠</div>
           <h3 class="service-title">Evaluación Neuropsicológica</h3>
           <p class="service-desc">Proceso clínico estructurado que permite identificar fortalezas, áreas de oportunidad y necesidades específicas del desarrollo. Incluye devolución clara a padres y plan de acción personalizado.</p>
+          <a class="service-btn" href="https://wa.me/526699296675?text=Hola,%20me%20interesa%20agendar%20una%20Entrevista%20Clinica%20Inicial." target="_blank">Agendar esta sesión</a>
         </div>
         
         <div class="service-card">
@@ -754,6 +811,53 @@ Especialista en evaluación y acompañamiento en neurodesarrollo infantil.
         Evaluaciones basadas en evidencia científica, comunicación clara con las familias y acompañamiento ético en cada proceso.
         Nuestro compromiso es orientar con responsabilidad y sensibilidad.
       </p>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section style="background:#f7f9fb; padding:60px 0;">
+    <div class="container">
+      <h2 class="section-title">¿Cómo es el proceso en CRESER?</h2>
+      
+      <div style="max-width:700px; margin:30px auto; text-align:left;">
+        <div style="display:flex; align-items:flex-start; gap:20px; margin-bottom:25px;">
+          <div style="background:var(--navy); color:var(--white); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">1</div>
+          <div>
+            <h4 style="font-family:'Playfair Display',serif; font-size:18px; margin-bottom:5px;">Entrevista Clínica Inicial</h4>
+            <p style="color:#666; font-size:15px;">Primera sesión para comprender el caso y definir el plan adecuado.</p>
+          </div>
+        </div>
+        
+        <div style="display:flex; align-items:flex-start; gap:20px; margin-bottom:25px;">
+          <div style="background:var(--navy); color:var(--white); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">2</div>
+          <div>
+            <h4 style="font-family:'Playfair Display',serif; font-size:18px; margin-bottom:5px;">Evaluación Neuropsicológica</h4>
+            <p style="color:#666; font-size:15px;">Proceso de valoración completo según las necesidades identificadas.</p>
+          </div>
+        </div>
+        
+        <div style="display:flex; align-items:flex-start; gap:20px; margin-bottom:25px;">
+          <div style="background:var(--navy); color:var(--white); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">3</div>
+          <div>
+            <h4 style="font-family:'Playfair Display',serif; font-size:18px; margin-bottom:5px;">Entrega de Informe y Recomendaciones</h4>
+            <p style="color:#666; font-size:15px;">Devolución clara con plan de acción personalizado.</p>
+          </div>
+        </div>
+        
+        <div style="display:flex; align-items:flex-start; gap:20px; margin-bottom:30px;">
+          <div style="background:var(--navy); color:var(--white); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">4</div>
+          <div>
+            <h4 style="font-family:'Playfair Display',serif; font-size:18px; margin-bottom:5px;">Acompañamiento y Seguimiento</h4>
+            <p style="color:#666; font-size:15px;">Intervención personalizada según las necesidades del niño y la familia.</p>
+          </div>
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="btn-primary" href="https://wa.me/526699296675?text=Hola,%20me%20interesa%20iniciar%20el%20proceso%20en%20CRESER." target="_blank">
+            Iniciar proceso
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
