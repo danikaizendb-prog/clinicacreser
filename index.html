@@ -40,6 +40,7 @@
   <style>
     :root {
       --navy: #1a2744;
+      --blue: #030079;
       --magenta: #cc2a7a;
       --gold: #c9972a;
       --cream: #f5f0e8;
@@ -55,7 +56,7 @@
     
     body {
       font-family: 'Inter', sans-serif;
-      color: var(--navy);
+      color: var(--blue);
       line-height: 1.7;
       background: var(--cream);
     }
@@ -180,7 +181,7 @@
       font-size: 32px;
       text-align: center;
       margin-bottom: 20px;
-      color: var(--navy);
+      color: var(--blue);
     }
     
     .section-subtitle {
@@ -215,7 +216,7 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: 20px;
-      color: var(--navy);
+      color: var(--blue);
       border-left: 4px solid var(--gold);
       padding-left: 20px;
       margin-top: 25px;
@@ -234,7 +235,7 @@
       border-radius: 25px;
       font-size: 14px;
       font-weight: 600;
-      color: var(--navy);
+      color: var(--blue);
     }
     
     .about-image {
@@ -251,6 +252,69 @@
     .about-image span {
       color: #888;
       font-style: italic;
+    }
+    
+    /* ==================== FAQ ==================== */
+    .faq {
+      background: var(--cream);
+      padding: 60px 20px;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 800px;
+      margin: 0 auto;
+      gap: 12px;
+    }
+    
+    .faq-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    .faq-question {
+      padding: 18px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 15px;
+      transition: background 0.2s;
+    }
+    
+    .faq-question:hover {
+      background: #f8f8f8;
+    }
+    
+    .faq-question::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--magenta);
+      transition: transform 0.3s;
+    }
+    
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      padding: 0 20px;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 0 20px 18px;
     }
     
     /* ==================== TEAM ==================== */
@@ -292,7 +356,7 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: 18px;
-      color: var(--navy);
+      color: var(--blue);
       border-top: 2px solid var(--gold);
       padding-top: 20px;
       margin-top: 20px;
@@ -330,7 +394,7 @@
     .service-title {
       font-size: 20px;
       margin-bottom: 12px;
-      color: var(--navy);
+      color: var(--blue);
     }
     
     .service-desc {
@@ -361,7 +425,7 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: 18px;
-      color: var(--navy);
+      color: var(--blue);
     }
     
     /* ==================== WHEN ==================== */
@@ -846,7 +910,7 @@ Especialista en evaluación y acompañamiento en neurodesarrollo infantil.
         
         <div style="margin-bottom:30px; padding:25px; background:var(--cream); border-radius:12px; border-left:4px solid var(--gold);">
           <h4 style="font-family:'Playfair Display',serif; font-size:18px; color:var(--navy); margin-bottom:10px;">¿Necesito tener un diagnóstico previo para agendar?</h4>
-          <p style="color:#555; font-size:15px; line-height:1.7;">No, para nada. La mayoría de las familias llegan sin diagnóstico, solo con preocupaciones. El objetivo de la primera entrevista es precisamente evaluar si es necesario realizar una evaluación formal y definir el mejor camino a seguir. Puedes agendar con solo preocupaciones o sospechas, sin necesidad de etiquetas previas. Muchos papás only buscan orientación y eso es completamente válido.</p>
+          <p style="color:#555; font-size:15px; line-height:1.7;">No, para nada. La mayoría de las familias llegan sin diagnóstico, solo con preocupaciones. El objetivo de la primera entrevista es precisamente evaluar si es necesario realizar una evaluación formal y definir el mejor camino a seguir. Puedes agendar con solo preocupaciones o sospechas, sin necesidad de etiquetas previas. Muchos papás únicamente buscan orientación y eso es completamente válido.</p>
         </div>
         
         <div style="margin-bottom:30px; padding:25px; background:var(--cream); border-radius:12px; border-left:4px solid var(--gold);">
@@ -926,6 +990,56 @@ Especialista en evaluación y acompañamiento en neurodesarrollo infantil.
     </div>
   </section>
 
+  <!-- PREGUNTAS FRECUENTES -->
+  <section class="faq" id="preguntas-frecuentes">
+    <div class="container">
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+      <p class="section-subtitle">Todo lo que necesitas saber antes de agendar</p>
+      
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question">¿Necesito tener un diagnóstico previo para agendar?</div>
+          <div class="faq-answer">No, para nada. La mayoría de las familias llegan sin diagnóstico, solo con preocupaciones. El objetivo de la primera entrevista es precisamente evaluar si es necesario realizar una evaluación formal y definir el mejor camino a seguir. Puedes agendar con solo preocupaciones o sospechas, sin necesidad de etiquetas previas.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">¿Cuánto cuesta la entrevista inicial?</div>
+          <div class="faq-answer">La entrevista clínica inicial tiene un costo de $500 MXN. Esta primera cita dura entre 90 y 120 minutos y nos permite conocer las preocupaciones de la familia, recopilamos información del desarrollo del niño/a y definimos el mejor camino a seguir.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">¿Qué incluye la evaluación neuropsicológica?</div>
+          <div class="faq-answer">La evaluación incluye: entrevista clínica completa, aplicación de pruebas estandarizadas para valorar atención, memoria, funciones ejecutivas, lenguaje y habilidades académicas, observación del comportamiento, integración de hallazgos, informe escrito completo y sesión de devolución con recomendaciones personalizadas.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">¿Cuánto tiempo dura todo el proceso?</div>
+          <div class="faq-answer">El proceso completo varía según cada caso. Generalmente: la entrevista inicial dura 90-120 minutos, la evaluación requiere 3-5 sesiones de aproximadamente 2 horas cada una (en diferentes días), y los resultados se entregan 1-2 semanas después de terminar la evaluación.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">¿Mi hijo/a necesitará medicamentos?</div>
+          <div class="faq-answer">No, los neuropsicólogos no recetamos medicamentos. Nuestro enfoque es no farmacológico, basado en intervención neuropsicológica, estrategias de compensación y orientación a la familia. Si durante la evaluación detectamos que podría ser necesario, derivamos con un psiquiatra o neurólogo infantil.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">¿A qué edad/atienen?</div>
+          <div class="faq-answer">Atendemos a niños, niñas y adolescentes desde los 2 hasta los 18 años de edad. El neurodesarrollo es nuestra especialidad, por lo que tenemos experiencia en las diferentes etapas del desarrollo infantil y adolescente.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">¿Dan diagnósticos?</div>
+          <div class="faq-answer">Sí, proporcionamos impresión diagnóstica cuando los hallazgos lo justifican, basada en criterios clínicos y manuales especializados (DSM-5, CIE-11). Sin embargo, nuestro enfoque no se limita a etiquetar: buscamos comprender para ayudar. Los diagnósticos en neurodesarrollo pueden cambiar con el tiempo, especialmente con intervención adecuada.</div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">¿Cómo agendo una cita?</div>
+          <div class="faq-answer">Puedes contactarnos por WhatsApp al (669) 929 6675 o escribirnos directamente. Te enviaremos un cuestionario previo para conocer las preocupaciones y agendar la primera cita. El pago de la entrevista confirma tu reservación.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACTO -->
   <section class="contact" id="contacto">
     <div class="container">
@@ -990,7 +1104,7 @@ Especialista en evaluación y acompañamiento en neurodesarrollo infantil.
       
       <div class="footer-social">
         <a href="https://www.instagram.com/creserni" target="_blank" aria-label="Instagram">📷</a>
-        <a href="https://www.facebook.com/profile.php?id=100064331130070" target="_blank" aria-label="Facebook">f</a>
+        <a href="https://www.facebook.com/profile.php?id=100064331130070" target="_blank" aria-label="Facebook">CRESER Neurodesarrollo Infantil</a>
       </div>
       
       <p class="footer-copy">© 2026 Clínica CRESER | Todos los derechos reservados</p>
@@ -1003,6 +1117,16 @@ Especialista en evaluación y acompañamiento en neurodesarrollo infantil.
   <a class="wa-float" href="https://wa.me/526699296675?text=Hola,%20vi%20la%20pagina%20de%20CRESER%20y%20me%20gustaria%20recibir%20orientacion." target="_blank" aria-label="WhatsApp">
     💬
   </a>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
